@@ -1,0 +1,212 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open BlazeDemo
+      meta:
+        browserName: edge
+        browserVersion: 141.0.3537.99
+        platformName: windows
+      url: '${APP_BLAZEDEMO_URL}'
+  - with:
+      note: BlazeDemo
+      steps:
+        - select:
+            shot: shot/d6zqtm.dti.jpeg#59
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Choose your departure city:'
+            value: Boston
+        - select:
+            shot: shot/xxr6q2.dti.jpeg#85
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Choose your destination city:'
+            value: Berlin
+        - click:
+            shot: shot/oxj5yq.dti.jpeg#110
+            object: html.inputsubmit
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Find Flights
+  - with:
+      note: BlazeDemo - reserve
+      steps:
+        - click:
+            shot: shot/q2wqjx.dti.jpeg#133
+            object: html.inputsubmit
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Choose This Flight
+                locators:
+                  - position: '1'
+  - with:
+      note: BlazeDemo Purchase
+      steps:
+        - click:
+            shot: shot/s4756m.dti.jpeg#139
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name
+        - type:
+            shot: shot/2yvdrg.dti.jpeg#201
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name
+            value: rajesh
+        - type:
+            shot: shot/idyv74.dti.jpeg#267
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Address
+            value: Bangalore
+        - type:
+            shot: shot/q7eb4p.dti.jpeg#333
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: City
+            value: Bangalore
+        - click:
+            shot: shot/aqz2ur.dti.jpeg#461
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+        - type:
+            shot: shot/4fzmse.dti.jpeg#523
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: State
+            value: karnataka
+        - click:
+            shot: shot/rbswan.dti.jpeg#651
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip Code
+        - type:
+            shot: shot/iakyk5.dti.jpeg#775
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Zip Code
+            value: '560061'
+        - click:
+            shot: shot/sptldk.dti.jpeg#969
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Credit Card Number
+        - type:
+            shot: shot/engdlx.dti.jpeg#1031
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Credit Card Number
+            value: '1234123412341234'
+        - click:
+            shot: shot/hbq2pb.dti.jpeg#1163
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Year
+        - type:
+            shot: shot/hnnagt.dti.jpeg#1225
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Year
+            value: '2030'
+        - type:
+            shot: shot/ajtdwd.dti.jpeg#1291
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name on Card
+            value: ''
+        - click:
+            shot: shot/lalbfr.dti.jpeg#1415
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name on Card
+        - type:
+            shot: shot/canxma.dti.jpeg#1477
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: Name on Card
+            value: Rajesh Avanthi
+        - click:
+            shot: shot/mn4gc4.dti.jpeg#1612
+            object: html.html
+            identifiers:
+              - properties:
+                  - content:
+                      - val: |-
+                          Travel The World
+                          home
+                          Your flight from TLV to SFO has been reserved.
+
+                          Airline: United
+
+                          Flight Number: UA954
+
+                          Price: 400
+
+                          Arbitrary Fees and Taxes: 514.76
+
+                          Total Cost: 914.76
+
+                          Please submit the form below to purchase the flight.
+
+                          Name
+                          Address
+                          City
+                          State
+                          Zip Code
+                          Card Type
+                          Visa
+                          American Express
+                          Diner's Club
+                          Credit Card Number
+                          Month
+                          Year
+                          Name on Card
+                          Remember me
+        - click:
+            shot: shot/nynrse.dti.jpeg#1668
+            object: html.inputsubmit
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Purchase Flight
+vars:
+  APP_BLAZEDEMO_URL:
+    expr: https://blazedemo.com/
+    modifier: in
