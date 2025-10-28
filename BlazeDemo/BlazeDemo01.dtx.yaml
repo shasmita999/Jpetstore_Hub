@@ -140,6 +140,7 @@ steps:
                       - val: Year
             value: '2030'
         - type:
+            enabled: 'false'
             shot: shot/ajtdwd.dti.jpeg#1291
             object: html.inputtext
             identifiers:
