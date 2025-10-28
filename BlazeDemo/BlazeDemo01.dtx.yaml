@@ -164,6 +164,7 @@ steps:
                       - val: Name on Card
             value: Rajesh Avanthi
         - click:
+            enabled: 'false'
             shot: shot/mn4gc4.dti.jpeg#1612
             object: html.html
             identifiers:
