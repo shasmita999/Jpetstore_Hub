@@ -1,0 +1,51 @@
+name: test
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /test/src
+        type: javaClasspath
+  - name: Jpetstore.recdata
+  - name: Jpetstore.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /test/Jpetstore.recdata
+        type: recsessionRecdata
+  - name: Jpetstore.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F0A5005EE60000F5F0B53133636530
+    dependencies: 
+      - path: /test/Jpetstore.recsession
+        type: testRecsession
+      - path: /test/pectran_com_c07.ma
+        type: test#moeb.applicationPackage
+  - name: _google_com_1ec.ma
+    type: moeb.applicationPackage
+  - name: pectran_com_c07.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+  - name: testo.recdata
+  - name: testo.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /test/testo.recdata
+        type: recsessionRecdata
+  - name: testo.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F0A4FFE8E2AA70F5F0B53133636530
+    dependencies: 
+      - path: /test/_google_com_1ec.ma
+        type: test#moeb.applicationPackage
+      - path: /test/testo.recsession
+        type: testRecsession
