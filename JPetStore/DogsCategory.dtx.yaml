@@ -1,0 +1,101 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open JPetStore
+      meta:
+        browserName: edge
+        browserVersion: 141.0.3537.99
+        platformName: windows
+      url: '${APP_JPETSTORE_URL}'
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/ivvthh.dti.jpeg#57
+            object: html.a
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Enter the Store
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/7gznqy.dti.jpeg#143
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: ../images/cats_icon.gif
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/smqzfd.dti.jpeg#122
+            object: html.font
+            identifiers:
+              - properties:
+                  - content:
+                      - val: FL-DLH-02
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/ehtkf2.dti.jpeg#142
+            object: html.a
+            identifiers:
+              - properties:
+                  - content:
+                      - val: EST-16
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/wkr764.dti.jpeg#135
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: ../images/button_add_to_cart.gif
+  - with:
+      note: JPetStore Demo
+      steps:
+        - type:
+            shot: shot/fw5mm6.dti.jpeg#162
+            object: html.inputtext
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'true'
+            value: '85'
+        - click:
+            shot: shot/edegoe.dti.jpeg#363
+            object: html.inputimage
+            identifiers:
+              - properties:
+                  - src:
+                      - val: ../images/button_update_cart.gif
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/rmsdg5.dti.jpeg#179
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: ../images/button_checkout.gif
+  - with:
+      note: JPetStore Demo
+      steps:
+        - click:
+            shot: shot/k5es3e.dti.jpeg#163
+            object: html.img
+            identifiers:
+              - properties:
+                  - src:
+                      - val: ../images/button_continue.gif
+vars:
+  APP_JPETSTORE_URL:
+    expr: http://10.190.116.49.nip.io:8081/JPetStoreDev/
+    modifier: in
